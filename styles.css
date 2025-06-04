@@ -255,8 +255,9 @@ h1, h2, p {
 
 /* Style and Center the "Schedule Your Appointment" button */
 .signup-button-container {
-    text-align: center; /* Centers the button */
-    margin-top: 20px;
+    text-align: center;
+    margin-top: 8px;   
+    margin-bottom: 8px; 
 }
 
 .signup-button {
