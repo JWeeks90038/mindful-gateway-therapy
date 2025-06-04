@@ -247,17 +247,17 @@ h1, h2, p {
 }
 
 /* Center the "Ready to break through" text */
-.cta-container {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 20px;
+.cta-container h2,
+.cta-container p {
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 /* Style and Center the "Schedule Your Appointment" button */
 .signup-button-container {
     text-align: center;
-    margin-top: 8px;   
-    margin-bottom: 8px; 
+    margin-top: 4px;   
+    margin-bottom: 4px; 
 }
 
 .signup-button {
