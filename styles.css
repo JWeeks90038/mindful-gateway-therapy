@@ -22,7 +22,7 @@ img, .container {
     position: relative;
     width: 100vw;
     height: 60vh; /* Adjust as needed */
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 /* Video background styling */
@@ -31,7 +31,7 @@ img, .container {
     width: 100vw;
     height: 60vh; /* Adjust height as needed */
     object-fit: cover;
-    position: absolute; /* or absolute if you want to overlay other content */
+    position: relative; /* or absolute if you want to overlay other content */
     top: 0;
     left: 0;
     filter: blur(2px) brightness(0.85); /* slight haze effect */
