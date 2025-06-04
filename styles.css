@@ -39,6 +39,7 @@ img, .container {
     z-index: 2;
     /* Optional: center text, add padding, etc. */
 }
+
 /* Header & Navigation */
 header {
     display: flex;
@@ -260,6 +261,18 @@ h1, h2, p {
 .support-box:hover {
     background: #f5f7fa;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Page */
+
+.full-width-video {
+    width: 100%;
+    height: auto;
+    max-width: 700px; /* or whatever fits your design */
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 12px; /* optional, for rounded corners */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08); /* optional, for subtle shadow */
 }
 
 /* About Page */
