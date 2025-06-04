@@ -20,7 +20,7 @@ img, .container {
 
 /* Video background styling */
 #bgVideo {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     min-width: 100vw;
@@ -404,4 +404,5 @@ footer p {
 header, footer {
     width: 100%;
     position: relative;
+    z-index: 10;
 }
