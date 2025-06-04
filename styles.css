@@ -377,6 +377,32 @@ h1, h2, p {
     }
 }
 
+.policy-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.policy-section h1,
+.policy-section h2,
+.policy-section p {
+    text-align: center;
+}
+
+.policy-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.policy-section h1,
+.policy-section h2,
+.policy-section p {
+    text-align: center;
+}
+
 /* Services section with background image */
 .services {
     position: relative;
