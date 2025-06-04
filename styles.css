@@ -148,7 +148,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('Images/group-on-ledge.jpg');
+    /*background-image: url('Images/group-on-ledge.jpg');*/
     background-size: cover;
     background-position: center;
     height: 100vh;
