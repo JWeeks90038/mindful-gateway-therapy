@@ -20,7 +20,7 @@ img, .container {
 
 /* Video background styling */
 #bgVideo {
-    position: static;
+    position: absolute;
     top: 0;
     left: 0;
     min-width: 100vw;
