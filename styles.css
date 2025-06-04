@@ -1,0 +1,407 @@
+/* Base Styles */
+html, body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img, .container {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Video background styling */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(2px) brightness(0.85); /* slight haze effect */
+    pointer-events: none; /* allows clicks through video */
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: transparent;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #568203;
+}
+
+@media (max-width: 768px) {
+    .menu-bar {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        width: auto;
+        min-width: 200px;
+    }
+
+    .menu-bar.menu-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        padding: 8px 15px;
+        background: none;
+        text-align: right;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #568203;
+    }
+}
+
+/* Default visibility of menu on large screens */
+nav ul li a {
+    text-decoration: none;
+    color: #568203;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d2b48c;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('Images/group-on-ledge.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 80%;
+    text-align: center;
+}
+
+.hero-content h2 {
+    color: #000000;
+    position: relative;
+    top: -230px;
+}
+
+/* Font sizes using clamp() for better responsiveness */
+h1, h2, p {
+    font-size: clamp(16px, 5vw, 36px);
+    transform: translateY(-20);
+}
+
+/* Buttons */
+.get-started-btn, .learn-more-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4f7942;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.get-started-btn:hover, .learn-more-btn:hover {
+    background-color: #d2b48c;
+}
+
+/* Support Section */
+.support {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.support-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.support-box {
+    background: #ffffff;
+    border: 2px solid #8b7d7b;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.support-box:hover {
+    background: #f5f7fa;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* About Page */
+/* Center About Our Company */
+.about h2 {
+    text-align: center;
+    font-size: 2rem; /* Adjust size as needed */
+    margin-bottom: 20px;
+}
+
+.centered-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Center the "Ready to break through" text */
+.cta-container {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Style and Center the "Schedule Your Appointment" button */
+.signup-button-container {
+    text-align: center; /* Centers the button */
+    margin-top: 20px;
+}
+
+.signup-button {
+    display: inline-block;
+    background-color: #4f7942; /* Green color */
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.signup-button:hover {
+    background-color: #3a5a32; /* Darker green on hover */
+}
+
+/* Make sure it's responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .about h2, .cta-container h2 {
+        font-size: 1.5rem; /* Adjust size for mobile */
+    }
+
+    .signup-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Style the therapist's image as a thumbnail */
+.therapist-profile {
+    text-align: center; /* Centers everything */
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    width: 150px; /* Adjust size for a thumbnail */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    display: block;
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Style the therapist's name */
+.therapist-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Style the therapist's title */
+.therapist-title {
+    font-size: 1em;
+    color: #555;
+}
+
+@media screen and (max-width: 480px) {
+    .thumbnail {
+        width: 100px;
+    }
+
+    .therapist-name {
+        font-size: 1em;
+    }
+
+    .therapist-title {
+        font-size: 0.9em;
+    }
+}
+
+/* Services section with background image */
+.services {
+    position: relative;
+    background: url('Images/beach-jumping.jpg') no-repeat center center;
+    background-size: cover;
+    color: white; /* Ensures text is readable */
+    text-align: center;
+    padding: 80px 20px; /* Adjust spacing */
+}
+
+/* Semi-transparent overlay for readability */
+.services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Centers and positions content */
+.centered-content {
+    position: relative;
+    z-index: 2; /* Ensures text is above overlay */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Service specialties list */
+.services-list {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Styles each list item */
+.services-list li {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .services {
+        padding: 50px 15px;
+    }
+
+    .services-list li {
+        font-size: 1.2em;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #d2b48c, #808000);
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+.footer-links {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 50px 50px;
+    padding: 25px 25px;
+}
+
+.footer-links:hover {
+    text-decoration: underline;
+}
+
+header, footer {
+    width: 100%;
+    position: relative;
+}
