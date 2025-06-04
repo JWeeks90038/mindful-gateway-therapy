@@ -19,25 +19,19 @@ img, .container {
 }
 
 .video-section {
-    position: relative;
     width: 100vw;
     height: 60vh; /* Adjust as needed */
-    /*overflow: hidden;*/
+    overflow: hidden;
+    position: relative;
 }
 
 /* Video background styling */
 #bgVideo {
-    display: block;
     width: 100vw;
-    height: 60vh; /* Adjust height as needed */
+    height: 100%;
     object-fit: cover;
-    position: relative; /* or absolute if you want to overlay other content */
-    top: 0;
-    left: 0;
-    filter: blur(2px) brightness(0.85); /* slight haze effect */
-    pointer-events: none;
-    margin: 0;
-    z-index: 1; /* No negative z-index */
+    filter: blur(2px) brightness(0.65);
+    display: block;
 }
 
 .video-overlay-content {
