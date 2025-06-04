@@ -156,7 +156,7 @@ nav ul li a:hover {
     justify-content: center;
     background-size: cover;
     background-position: center;
-    height: 20vh;
+    height: 60vh;
     width: 100%;
     padding: 0 20px;
 }
@@ -170,7 +170,7 @@ nav ul li a:hover {
 .hero-content h2 {
     color: #000000;
     position: relative;
-    top: -60px;
+    top: -80px;
 }
 
 /* Font sizes using clamp() for better responsiveness */
