@@ -18,13 +18,20 @@ img, .container {
     height: auto;
 }
 
+.video-section {
+    position: relative;
+    width: 100vw;
+    height: 60vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
 /* Video background styling */
 #bgVideo {
     display: block;
     width: 100vw;
     height: 60vh; /* Adjust height as needed */
     object-fit: cover;
-    position: relative; /* or absolute if you want to overlay other content */
+    position: absolute; /* or absolute if you want to overlay other content */
     top: 0;
     left: 0;
     filter: blur(2px) brightness(0.85); /* slight haze effect */
@@ -33,6 +40,11 @@ img, .container {
     z-index: 1; /* No negative z-index */
 }
 
+.video-overlay-content {
+    position: relative;
+    z-index: 2;
+    /* Optional: center text, add padding, etc. */
+}
 /* Header & Navigation */
 header {
     display: flex;
