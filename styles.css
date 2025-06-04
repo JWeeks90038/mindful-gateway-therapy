@@ -156,9 +156,9 @@ nav ul li a:hover {
     justify-content: center;
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    height: 55vh;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .hero-content {
