@@ -152,21 +152,20 @@ nav ul li a:hover {
 /* Hero Section */
 .hero-section {
     display: flex;
-    flex-direction: column; /* Stack content vertically */
     align-items: center;
     justify-content: center;
-    /* background-image: url('Images/group-on-ledge.jpg'); */
+    /*background-image: url('Images/group-on-ledge.jpg');*/
     background-size: cover;
     background-position: center;
-    min-height: 300px; /* Or another value, or remove entirely */
-    height: auto;      /* Let content define height */
+    height: 100vh;
     width: 100%;
     padding: 0 20px;
 }
 
 .hero-content {
-    max-width: 80%;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .hero-content h2 {
