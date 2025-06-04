@@ -149,6 +149,42 @@ nav ul li a:hover {
     color: #d2b48c;
 }
 
+.expertise-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.expertise-card {
+    background: #f5f7fa;
+    border-left: 5px solid #4f7942;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(80, 120, 60, 0.08);
+    padding: 20px 24px;
+    max-width: 340px;
+    min-width: 240px;
+    flex: 1 1 260px;
+    margin: 0 8px;
+    transition: box-shadow 0.2s;
+}
+.expertise-card:hover {
+    box-shadow: 0 4px 16px rgba(80, 120, 60, 0.18);
+}
+
+.expertise-title {
+    font-weight: bold;
+    color: #4f7942;
+    font-size: 1.15em;
+    margin-bottom: 8px;
+}
+
+.expertise-desc {
+    color: #333;
+    font-size: 1em;
+}
+
 /* Hero Section */
 .hero-section {
     display: flex;
