@@ -224,7 +224,7 @@ nav ul li a:hover {
 }
 
 .hero-subtext {
-    margin-top: 32px; /* Adjust value as needed */
+    margin-top: 60px; /* Adjust value as needed */
 }
 
 /* Font sizes using clamp() for better responsiveness */
