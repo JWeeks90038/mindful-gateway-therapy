@@ -193,7 +193,7 @@ nav ul li a:hover {
     justify-content: center;
     background-size: cover;
     background-position: center;
-    height: 55vh;
+    height: 35vh;
     width: 100%;
     padding: 0 10px;
 }
@@ -208,6 +208,11 @@ nav ul li a:hover {
     color: #fff;
     position: relative;
     top: -650px;
+}
+
+/* Move the button up by reducing margin-top */
+.get-started-btn {
+    margin-top: 0; /* Remove extra space above button */
 }
 
 /* Font sizes using clamp() for better responsiveness */
