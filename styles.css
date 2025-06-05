@@ -210,6 +210,14 @@ nav ul li a:hover {
     top: -650px;
 }
 
+/* Add this for mobile screens */
+@media (max-width: 600px) {
+    .hero-content h2 {
+        top: -80px; /* Adjust as needed so it's visible on mobile */
+        font-size: 1.2em; /* Optional: make text more readable on mobile */
+    }
+}
+
 /* Move the button up by reducing margin-top */
 .get-started-btn {
     margin-top: 0; /* Remove extra space above button */
