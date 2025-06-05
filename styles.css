@@ -213,7 +213,7 @@ nav ul li a:hover {
 /* For mobile screens */
 @media (max-width: 600px) {
     .hero-content h2 {
-        top: -30px; /* No negative offset on mobile */
+        top: -70px; /* No negative offset on mobile */
         font-size: 1.2em;
     }
 }
