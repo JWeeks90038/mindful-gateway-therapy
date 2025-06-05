@@ -213,7 +213,7 @@ nav ul li a:hover {
 /* For mobile screens */
 @media (max-width: 600px) {
     .hero-content h2 {
-        top: -140px; /* No negative offset on mobile */
+        top: -150px; /* No negative offset on mobile */
         font-size: 1.2em;
     }
 }
@@ -221,6 +221,10 @@ nav ul li a:hover {
 /* Move the button up by reducing margin-top */
 .get-started-btn {
     margin-top: 0; /* Remove extra space above button */
+}
+
+.hero-subtext {
+    margin-top: 32px; /* Adjust value as needed */
 }
 
 /* Font sizes using clamp() for better responsiveness */
