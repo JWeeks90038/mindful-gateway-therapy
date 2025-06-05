@@ -207,7 +207,7 @@ nav ul li a:hover {
 .hero-content h2 {
     color: #fff;
     position: relative;
-    top: -180px;
+    top: -500px;
 }
 
 /* Font sizes using clamp() for better responsiveness */
