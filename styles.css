@@ -188,26 +188,35 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero-section {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align content to the top */
     justify-content: center;
     background-size: cover;
     background-position: center;
-    height: 0vh;
+    height: 40vh; /* Adjust as needed */
     width: 100%;
     padding: 0 10px;
+    z-index: 1;
 }
 
 .hero-content {
+    position: absolute;
+    top: 8%; /* Move content toward the top of the video */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
+    width: 100%;
+    z-index: 2;
     margin: 0;
     padding: 0;
 }
 
 .hero-content h2 {
     color: #fff;
-    position: relative;
-    top: -450px; /* Less extreme, adjust as needed */
+    margin-bottom: 24px;
+    position: static; /* Remove relative/absolute positioning */
+    top: auto;
 }
 
 /* For mobile screens */
