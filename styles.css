@@ -227,11 +227,19 @@ nav ul li a:hover {
 
 /* Move the button up by reducing margin-top */
 .get-started-btn {
-    margin-top: 0; /* Remove extra space above button */
+    display: block;
+    margin: 32px auto 0 auto; /* Top margin for spacing, auto left/right for centering */
     align-items: center;
-    display: flex;
     justify-content: center;
     padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4f7942;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
 }
 
 .hero-subtext {
