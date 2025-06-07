@@ -228,6 +228,10 @@ nav ul li a:hover {
 /* Move the button up by reducing margin-top */
 .get-started-btn {
     margin-top: 0; /* Remove extra space above button */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 12px 24px;
 }
 
 .hero-subtext {
