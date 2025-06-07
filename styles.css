@@ -193,9 +193,9 @@ nav ul li a:hover {
     justify-content: center;
     background-size: cover;
     background-position: center;
-    height: 0vh;
+    height: 40vh;
     width: 100%;
-    padding: 0 10px;
+    z-index: 1;
 }
 
 .hero-content {
@@ -206,8 +206,8 @@ nav ul li a:hover {
 
 .hero-content h2 {
     color: #fff;
-    position: relative;
-    top: -450px; /* Less extreme, adjust as needed */
+    position: static;
+    margin-bottom: 24px;
 }
 
 /* For mobile screens */
