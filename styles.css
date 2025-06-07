@@ -502,6 +502,11 @@ h1, h2, p {
     }
 }
 
+.back-to-top-container {
+    text-align: center;
+    margin: 24px 0 0 0; /* Optional: add space above */
+}
+
 .back-to-top-link {
     font-size: 0.95em;
     color: #4f7942;
