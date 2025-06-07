@@ -502,6 +502,17 @@ h1, h2, p {
     }
 }
 
+.back-to-top-link {
+    font-size: 0.95em;
+    color: #4f7942;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.back-to-top-link:hover {
+    color: #568203;
+}
+
 /* Footer */
 footer {
     text-align: center;
