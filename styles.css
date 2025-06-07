@@ -190,7 +190,7 @@ nav ul li a:hover {
 .hero-section {
     position: relative;
     display: flex;
-    align-items: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Keep content at the top */
     justify-content: center;
     background-size: cover;
     background-position: center;
@@ -202,7 +202,7 @@ nav ul li a:hover {
 
 .hero-content {
     position: absolute;
-    top: 8%; /* Move content toward the top of the video */
+    top: 5%; /* Move content toward the very top of the video */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -215,7 +215,7 @@ nav ul li a:hover {
 .hero-content h2 {
     color: #fff;
     margin-bottom: 24px;
-    position: static; /* Remove relative/absolute positioning */
+    position: static; /* No relative/absolute positioning */
     top: auto;
 }
 
