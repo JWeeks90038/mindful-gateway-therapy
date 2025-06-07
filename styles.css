@@ -228,8 +228,8 @@ nav ul li a:hover {
 
 /* Move the button up by reducing margin-top */
 .get-started-btn {
-    display: inline-block;           /* Change from block to inline-block */
-    margin: 32px auto 0 auto;        /* Center horizontally */
+    display: inline-block;
+    margin: 32px auto 0 auto;
     padding: 12px 24px;
     font-size: 18px;
     font-weight: bold;
@@ -239,6 +239,11 @@ nav ul li a:hover {
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s ease-in-out;
+}
+
+/* Ensure the parent has text-align: center */
+body, .hero-section {
+    text-align: center;
 }
 
 .hero-subtext {
