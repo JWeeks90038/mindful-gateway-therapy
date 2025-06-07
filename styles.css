@@ -30,7 +30,7 @@ img, .container {
     width: 100vw;
     height: 100%;
     object-fit: cover;
-    filter: blur(1px) brightness(0.65);
+    filter: blur(0px) brightness(0.65);
     display: block;
 }
 
