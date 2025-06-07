@@ -206,7 +206,7 @@ nav ul li a:hover {
 
 .hero-content h2 {
     color: #fff;
-    position: static;
+    position: relative;
     top: -450px; /* Less extreme, adjust as needed */
 }
 
