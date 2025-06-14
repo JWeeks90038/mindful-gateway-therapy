@@ -1,0 +1,562 @@
+/* Base Styles */
+html, body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img, .container {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-section {
+    width: 100vw;
+    height: 60vh; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.video-overlay-content {
+    position: relative;
+    z-index: 2;
+    /* Optional: center text, add padding, etc. */
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: transparent;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #568203;
+}
+
+@media (max-width: 768px) {
+    .menu-bar {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        width: auto;
+        min-width: 200px;
+    }
+
+    .menu-bar.menu-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        padding: 8px 15px;
+        background: none;
+        text-align: right;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #568203;
+    }
+}
+
+/* Default visibility of menu on large screens */
+nav ul li a {
+    text-decoration: none;
+    color: #568203;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d2b48c;
+}
+
+.expertise-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.expertise-card {
+    background: #f5f7fa;
+    border-left: 5px solid #4f7942;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(80, 120, 60, 0.08);
+    padding: 20px 24px;
+    max-width: 340px;
+    min-width: 240px;
+    flex: 1 1 260px;
+    margin: 0 8px;
+    transition: box-shadow 0.2s;
+}
+.expertise-card:hover {
+    box-shadow: 0 4px 16px rgba(80, 120, 60, 0.18);
+}
+
+.expertise-title {
+    font-weight: bold;
+    color: #4f7942;
+    font-size: 1.15em;
+    margin-bottom: 8px;
+}
+
+.expertise-desc {
+    color: #333;
+    font-size: 1em;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 40vh; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+#bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 8%; /* Adjust this value to move wording up/down */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-content h2 {
+    color: #fff;
+    margin-bottom: 24px;
+    position: static;
+    top: auto;
+}
+
+/* For mobile screens */
+@media (max-width: 600px) {
+    .hero-content h2 {
+        top: -150px; /* No negative offset on mobile */
+        font-size: 1.2em;
+    }
+}
+
+/* Move the button up by reducing margin-top */
+.get-started-btn {
+    display: inline-block;
+    margin: 32px auto 0 auto;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4f7942;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Ensure the parent has text-align: center */
+body, .hero-section {
+    text-align: center;
+}
+
+.hero-subtext {
+    margin-top: 32px; /* Adjust value as needed */
+}
+
+/* Font sizes using clamp() for better responsiveness */
+h1, h2, p {
+    font-size: clamp(16px, 5vw, 36px);
+    transform: translateY(-20);
+}
+
+/* Buttons */
+.learn-more-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4f7942;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.get-started-btn:hover, .learn-more-btn:hover {
+    background-color: #d2b48c;
+}
+
+/* Support Section */
+.support {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: #fff;
+    margin-top: -20px;
+}
+
+.support p {
+    margin-top: 0;
+    max-width: 900px;      /* Controls the maximum width */
+    margin-left: auto;     /* Centers the paragraph horizontally */
+    margin-right: auto;
+    padding: 0 16px;       /* Optional: adds padding on small screens */
+    line-height: 1.6;      /* Optional: improves readability */
+}
+
+.support-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.support-box {
+    background: #ffffff;
+    border: 2px solid #8b7d7b;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+}
+
+.support-box p {
+    font-size: 0.9em;
+}
+
+.support-box:hover {
+    background: #f5f7fa;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Page */
+
+.full-width-video {
+    width: 100%;
+    height: auto;
+    max-width: 700px; /* or whatever fits your design */
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 12px; /* optional, for rounded corners */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08); /* optional, for subtle shadow */
+}
+
+/* About Page */
+/* Center About Our Company */
+.about h2 {
+    text-align: center;
+    font-size: 2rem; /* Adjust size as needed */
+    margin-bottom: 20px;
+}
+
+.centered-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Center the "Ready to break through" text */
+.cta-container h2,
+.cta-container p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Style and Center the "Schedule Your Appointment" button */
+.signup-button-container {
+    text-align: center;
+    margin-top: 4px;   
+    margin-bottom: 4px; 
+}
+
+.signup-button {
+    display: inline-block;
+    background-color: #4f7942; /* Green color */
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.signup-button:hover {
+    background-color: #3a5a32; /* Darker green on hover */
+}
+
+/* Make sure it's responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .about h2, .cta-container h2 {
+        font-size: 1.5rem; /* Adjust size for mobile */
+    }
+
+    .signup-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Style the therapist's image as a thumbnail */
+.therapist-profile {
+    text-align: center; /* Centers everything */
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    width: 150px; /* Adjust size for a thumbnail */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    display: block;
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Style the therapist's name */
+.therapist-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Style the therapist's title */
+.therapist-title {
+    font-size: 1em;
+    color: #555;
+}
+
+@media screen and (max-width: 480px) {
+    .thumbnail {
+        width: 100px;
+    }
+
+    .therapist-name {
+        font-size: 1em;
+    }
+
+    .therapist-title {
+        font-size: 0.9em;
+    }
+}
+
+.policy-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.policy-section h1,
+.policy-section h2,
+.policy-section p {
+    text-align: center;
+}
+
+.policy-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.policy-section h1,
+.policy-section h2,
+.policy-section p {
+    text-align: center;
+}
+
+/* Services section with background image */
+.services {
+    position: relative;
+    background: url('Images/beach-jumping.jpg') no-repeat center center;
+    background-size: cover;
+    color: white; /* Ensures text is readable */
+    text-align: center;
+    padding: 80px 20px; /* Adjust spacing */
+}
+
+/* Semi-transparent overlay for readability */
+.services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Centers and positions content */
+.centered-content {
+    position: relative;
+    z-index: 2; /* Ensures text is above overlay */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Service specialties list */
+.services-list {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Styles each list item */
+.services-list li {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .services {
+        padding: 50px 15px;
+    }
+
+    .services-list li {
+        font-size: 1.2em;
+    }
+}
+
+.back-to-top-container {
+    text-align: center;
+    margin: 24px 0 0 0; /* Optional: add space above */
+}
+
+.back-to-top-link {
+    font-size: 0.95em;
+    color: #4f7942;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.back-to-top-link:hover {
+    color: #568203;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #d2b48c, #808000);
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+.footer-links {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 50px 50px;
+    padding: 25px 25px;
+}
+
+.footer-links:hover {
+    text-decoration: underline;
+}
+
+header, footer {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
