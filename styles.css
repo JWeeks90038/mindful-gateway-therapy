@@ -54,6 +54,78 @@ nav ul li {
     padding: 0 15px;
 }
 
+/* Review Section */
+.reviews {
+    background: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2em;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.review-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.review {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 24px;
+    max-width: 320px;
+    flex: 1 1 280px;
+}
+
+.review p {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.review span {
+    font-size: 0.95em;
+    color: #888;
+}
+
+.stars {
+    color: #FFD700; /* Gold */
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.review-date {
+    display: block;
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.review-client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #888;
+    gap: 8px;
+}
+
+.client-icon {
+    font-size: 1.3em;
+    margin-right: 6px;
+}
+
+.client-info {
+    text-align: left;
+}
+
 /* Mobile Menu */
 .menu-toggle {
     display: none;
@@ -268,28 +340,57 @@ h1, h2, p {
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s ease-in-out;
+    margin-top: 32px;
 }
 
 .get-started-btn:hover, .learn-more-btn:hover {
     background-color: #d2b48c;
 }
 
+.wave-divider {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    margin: 0;
+    background: transparent;
+    display: block;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
 /* Support Section */
 .support {
-    padding-top: 150px;
+    padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
     background-color: #fff;
-    margin-top: -20px;
+    margin-top: 40px;
 }
 
 .support p {
-    margin-top: 0;
-    max-width: 900px;      /* Controls the maximum width */
-    margin-left: auto;     /* Centers the paragraph horizontally */
+    margin-top: 0px; /* Reduced for less space */
+    max-width: 900px;
+    margin-left: auto;
     margin-right: auto;
-    padding: 0 16px;       /* Optional: adds padding on small screens */
-    line-height: 1.6;      /* Optional: improves readability */
+    padding: 0 16px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Reduced for less space */
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(80px); /* Increased from 40px for more movement */
+    transition: opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1), transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .support-boxes {
