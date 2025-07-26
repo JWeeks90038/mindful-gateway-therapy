@@ -445,16 +445,46 @@ h1, h2, p {
     }
 }
 
-/* Contact Page */
+/* Contact Section Styles */
+.contact-section {
+    background: #f8f8f8;
+    padding: 48px 0;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.centered-content h3 {
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #4f7942;
+    margin-bottom: 12px;
+}
+
+.centered-content h2 {
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+.centered-content p {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 18px;
+}
 
 .full-width-video {
     width: 100%;
-    height: auto;
-    max-width: 700px; /* or whatever fits your design */
-    display: block;
-    margin: 0 auto 20px auto;
-    border-radius: 12px; /* optional, for rounded corners */
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08); /* optional, for subtle shadow */
+    border-radius: 8px;
+    margin-bottom: 18px;
 }
 
 /* About Page */
