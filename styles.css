@@ -420,6 +420,31 @@ h1, h2, p {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 700px) {
+    .support-boxes {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .support-box {
+        max-width: 95vw;
+        width: 100%;
+        padding: 18px 12px;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+    .support-box h3 {
+        font-size: 1.15em;
+    }
+    .support-box p {
+        font-size: 0.98em;
+    }
+    .learn-more-btn, #scheduleNowButton {
+        font-size: 1em;
+        padding: 10px 18px;
+    }
+}
+
 /* Contact Page */
 
 .full-width-video {
