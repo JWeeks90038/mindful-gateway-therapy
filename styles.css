@@ -461,6 +461,11 @@ h1, h2, p {
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
 
+.contact-content p {
+    font-size: 12px;
+    color: #e7e7e7;
+}
+
 .centered-content h3 {
     font-size: 1.4em;
     font-weight: 400;
@@ -477,8 +482,13 @@ h1, h2, p {
 
 .centered-content p {
     font-size: 1em;
-    color: #444;
+    color: #606060;
     margin-bottom: 18px;
+}
+
+.expertise-underline {
+    text-decoration: underline;
+    text-underline-offset: 4px; /* optional: moves underline slightly below text */
 }
 
 .full-width-video {
