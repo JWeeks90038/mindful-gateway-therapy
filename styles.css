@@ -347,19 +347,24 @@ h1, h2, p {
     background-color: #d2b48c;
 }
 
-.wave-divider {
+.wave-divider,
+.wave-divider.invert {
     width: 100%;
-    height: 60px;
+    height: 15px;
     overflow: hidden;
     margin: 0;
     background: transparent;
     display: block;
 }
 
-.wave-divider svg {
+.wave-divider svg,
+.wave-divider.invert svg {
     display: block;
     width: 100%;
-    height: 100px;
+    height: 15px; /* Match the parent height */
+}
+.wave-divider.invert svg {
+    transform: scaleY(-2);
 }
 
 /* Support Section */
