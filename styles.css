@@ -334,11 +334,14 @@ nav ul li a:hover {
     100% { background-position: 0% 50%; }
 }
 
-/* For mobile screens */
 @media (max-width: 600px) {
     .hero-content h2 {
-        top: -150px; /* No negative offset on mobile */
-        font-size: 1.2em;
+        top: -140px;
+        font-size: 0.7em;
+    }
+    .motion-gradient-text {
+        font-size: 1em;      /* Adjust for mobile readability */
+        padding: 0 8px;      /* Optional: add horizontal padding */
     }
 }
 
