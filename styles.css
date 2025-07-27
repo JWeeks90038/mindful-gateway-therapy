@@ -337,7 +337,7 @@ nav ul li a:hover {
 @media (max-width: 600px) {
     .hero-content h2 {
         top: -140px;
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
     .motion-gradient-text {
         font-size: 1em;      /* Adjust for mobile readability */
