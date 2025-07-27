@@ -340,7 +340,7 @@ nav ul li a:hover {
         font-size: 0.9em;
     }
     .motion-gradient-text {
-        font-size: 1em;      /* Adjust for mobile readability */
+        font-size: 1.2em;      /* Adjust for mobile readability */
         padding: 0 8px;      /* Optional: add horizontal padding */
     }
 }
