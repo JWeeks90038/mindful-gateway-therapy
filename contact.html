@@ -92,5 +92,30 @@
         <p>&copy; 2025 Mindful Gateway Therapy Corporation | All Rights Reserved</p>
     </footer>
     <script src="script.js"></script>
+    <!-- Preload all video sources for smoother playback -->
+    <script>
+    // Preload all video sources for smoother playback
+    const videoSources = [
+        'videos/waves-crash.mp4',
+        'videos/aurora.mp4',
+        'videos/Group-Truck-Smiling.mp4',
+        'videos/abstract-2.mp4',
+        'videos/abstract.mp4',
+        'videos/sea-waves.mp4',
+        'videos/waves-beach-aerial.mp4',
+        'videos/light-rays.mp4',
+        'videos/meditation-ocean.mp4',
+        'videos/clouds.mp4',
+        'videos/Group-Truck-Smiling.mp4'
+    ];
+    videoSources.forEach(src => {
+        const video = document.createElement('video');
+        video.src = src;
+        video.preload = 'auto';
+        video.muted = true;
+        video.style.display = 'none';
+        document.body.appendChild(video);
+    });
+    </script>
 </body>
 </html>

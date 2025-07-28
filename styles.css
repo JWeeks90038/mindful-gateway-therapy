@@ -648,7 +648,8 @@ h1, h2, p {
 
 .signup-button-container,
 .contact-button-container {
-    margin-top: 40px; /* Increase this value to move the button lower */
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 /* Make sure it's responsive for smaller screens */
