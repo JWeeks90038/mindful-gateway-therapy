@@ -1,3 +1,14 @@
+/* Fix for sticky footer on signup page: remove extra space below footer on all devices */
+.signup-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    flex: 1 0 auto;
+}
+
+.centered-content {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
 /* Base Styles */
 html, body {
     font-family: 'Merriweather', serif;
