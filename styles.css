@@ -1,30 +1,9 @@
-/* Fix for sticky footer on signup page: remove extra space below footer on all devices */
-.signup-section {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    flex: 1 0 auto;
-}
 
-.centered-content {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-/* Base Styles */
-html, body {
-    font-family: 'Merriweather', serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e0f7ef 40%, #d4e9fa 100%);
-    color: #333;
-    overflow-x: hidden;
-    line-height: 1.6;
-    height: 100%;
-}
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e0f7ef 40%, #d4e9fa 100%);
+    overflow-x: hidden;
+    /* Standard body, no flexbox, no min-height */
 }
 
 * {
@@ -88,9 +67,7 @@ nav ul li {
     background: transparent; /* No solid background */
     border: none;            /* Remove border for seamless look */
     box-shadow: 0 8px 32px 0 rgba(80, 120, 60, 0.07); /* Soft feathered shadow */
-    text-align: center;
 }
-
 .reviews h2 {
     font-size: 2em;
     margin-bottom: 24px;
@@ -762,13 +739,11 @@ h1, h2, p {
     border-radius: 18px;
     border: 6px solid #e0f7ef; /* Soft mint border */
     box-shadow: 0 0 32px 0 rgba(80, 120, 60, 0.18);
-      position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
 }
 
 /* Services section video: no border radius, no border */
@@ -852,7 +827,7 @@ footer {
     width: 100%;
     padding: 20px;
     color: #3c4539;
-    margin-top: auto;
+    /* Standard footer, no sticky footer margin */
 }
 
 footer p {
@@ -875,4 +850,13 @@ header, footer {
     width: 100%;
     position: relative;
     z-index: 10;
+}
+
+/* Restore flex for containers */
+.support-boxes,
+.review-list {
+    display: flex !important;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
