@@ -1,28 +1,29 @@
+const path = require('path');
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware for serving static files like CSS, images, etc.
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 // Home route
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // About route
 app.get('/about', (req, res) => {
-    res.sendFile(__dirname + '/about.html');
+    res.sendFile(path.join(__dirname, 'about.html'));
 });
 
 // Services route
 app.get('/services', (req, res) => {
-    res.sendFile(__dirname + '/services.html');
+    res.sendFile(path.join(__dirname, 'services.html'));
 });
 
 // Contact route
 app.get('/contact', (req, res) => {
-    res.sendFile(__dirname + '/contact.html');
+    res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
 // Sign-up route (just redirects to third-party sign-up page)
