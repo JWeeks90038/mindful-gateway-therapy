@@ -26,9 +26,18 @@ app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
-// Sign-up route (just redirects to third-party sign-up page)
+// Sign-up route
 app.get('/signup', (req, res) => {
-    res.redirect('https://externalwebsite.com/signup'); // Redirect to external sign-up page
+    res.sendFile(path.join(__dirname, 'signup.html'));
+});
+
+// FAQ and blog hub routes
+app.get('/faq', (req, res) => {
+    res.sendFile(path.join(__dirname, 'faq', 'index.html'));
+});
+
+app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, 'blog', 'index.html'));
 });
 
 // Placeholder for other routes (you can add any additional ones you need)
