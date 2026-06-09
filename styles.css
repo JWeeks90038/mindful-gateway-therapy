@@ -20,7 +20,7 @@ iframe,
 }
 
 .video-section {
-    width: 100vw;
+    width: 100%;
     height: 60vh; /* Adjust as needed */
     overflow: hidden;
     position: relative;
@@ -467,8 +467,7 @@ h1, h2, p {
 }
 
 .transition-video-container {
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
     overflow: hidden;
     margin: 32px 0 32px 0;
     display: flex;
@@ -478,8 +477,7 @@ h1, h2, p {
 }
 
 .transition-video {
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
     min-height: 80px;
     height: 80px;
     object-fit: cover;

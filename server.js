@@ -1,10 +1,27 @@
 const path = require('path');
+const compression = require('compression');
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware for serving static files like CSS, images, etc.
-app.use(express.static(__dirname));
+app.use(compression());
+
+// Middleware for serving static files like CSS, images, videos, and scripts.
+app.use(express.static(__dirname, {
+    etag: true,
+    lastModified: true,
+    maxAge: '7d',
+    setHeaders: (res, filePath) => {
+        if (filePath.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'no-cache');
+            return;
+        }
+
+        if (/\.(css|js|png|jpg|jpeg|gif|webp|svg|mp4|woff|woff2)$/i.test(filePath)) {
+            res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
+        }
+    }
+}));
 
 // Home route
 app.get('/', (req, res) => {

@@ -102,7 +102,7 @@
     </header>
 
   <section class="hero-section reveal active">
-    <video id="bgVideo" autoplay muted loop playsinline preload="auto">
+    <video id="bgVideo" autoplay muted loop playsinline preload="metadata">
         <source src="videos/Group-Truck-Smiling.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -136,7 +136,7 @@
 
     <!-- Therapeutic Transition Video -->
     <div class="transition-video-container">
-        <video class="transition-video" autoplay muted loop playsinline preload="auto">
+        <video class="transition-video" autoplay muted loop playsinline preload="metadata">
             <source src="videos/waves-beach-aerial.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -230,30 +230,5 @@
         <p>&copy; 2026 Mindful Gateway Therapy Corporation | All Rights Reserved</p>
     </footer>
     <script src="script.js"></script>
-    <!-- Preload all video sources for smoother playback -->
-    <script>
-    // Preload all video sources for smoother playback
-    const videoSources = [
-        'videos/waves-crash.mp4',
-        'videos/aurora.mp4',
-        'videos/Group-Truck-Smiling.mp4',
-        'videos/abstract-2.mp4',
-        'videos/abstract.mp4',
-        'videos/sea-waves.mp4',
-        'videos/waves-beach-aerial.mp4',
-        'videos/light-rays.mp4',
-        'videos/meditation-ocean.mp4',
-        'videos/clouds.mp4',
-        'videos/Group-Truck-Smiling.mp4'
-    ];
-    videoSources.forEach(src => {
-        const video = document.createElement('video');
-        video.src = src;
-        video.preload = 'auto';
-        video.muted = true;
-        video.style.display = 'none';
-        document.body.appendChild(video);
-    });
-    </script>
 </body>
 </html>
