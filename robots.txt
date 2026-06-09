@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://mindfulgatewaytherapy.com/sitemap.xml
+Sitemap: https://www.mindfulgatewaytherapy.com/sitemap.xml

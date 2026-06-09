@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mindfulgatewaytherapy.com"
+        }
+      ],
+      "destination": "https://www.mindfulgatewaytherapy.com/:path*",
+      "permanent": true
+    }
+  ]
+}
