@@ -1,8 +1,17 @@
 
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     background: linear-gradient(135deg, #f8f9fa 0%, #e0f7ef 40%, #d4e9fa 100%);
-    overflow-x: hidden;
     margin: 0;
     /* Standard body, no flexbox, no min-height */
 }
@@ -1217,10 +1226,26 @@ header, footer {
         padding: 16px;
     }
 
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0 8px;
+        padding: 16px 10px;
+    }
+
     .footer-links {
-        margin: 6px 10px;
-        padding: 8px 4px;
-        font-size: 14px;
+        margin: 0;
+        padding: 6px 0;
+        font-size: 12px;
+        flex: 0 0 auto;
+    }
+
+    footer > .footer-seal,
+    footer > .footer-social,
+    footer > p {
+        width: 100%;
     }
 
     .signup-footer-links-row {
