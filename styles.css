@@ -303,11 +303,14 @@ nav ul li a:hover {
     width: 100%;
     height: clamp(300px, 40vh, 520px);
     overflow: hidden;
+    overflow: clip;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
     border-radius: 18px;
+    border: 6px solid #e0f7ef;
+    box-shadow: 0 0 32px 0 rgba(80, 120, 60, 0.18);
     margin-bottom: 1px; 
 }
 
@@ -319,9 +322,9 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    border: 6px solid #e0f7ef; /* Soft mint border */
-    border-radius: 18px;        /* Rounded corners */
-    box-shadow: 0 0 32px 0 rgba(80, 120, 60, 0.18); /* Soft green glow */
+    border: 0;
+    border-radius: inherit;
+    box-shadow: none;
 }
 
 .hero-content {
@@ -1176,13 +1179,15 @@ header, footer {
     .hero-section {
         height: clamp(220px, 34vh, 320px);
         border-radius: 14px;
+        border-width: 4px;
+        box-shadow: 0 0 18px 0 rgba(80, 120, 60, 0.12);
         margin: 0 10px 1px;
+        clip-path: inset(0 round 14px);
     }
 
     #bgVideo,
     .hero-section #bgVideo {
-        border-width: 4px;
-        border-radius: 14px;
+        border-radius: inherit;
     }
 
     .support {
