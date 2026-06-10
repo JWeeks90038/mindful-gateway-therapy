@@ -652,6 +652,29 @@ h1, h2, p {
     margin-bottom: 18px;
 }
 
+.contact-phone-label {
+    margin-bottom: 8px;
+    color: #5f6f59;
+    letter-spacing: 0.03em;
+}
+
+.contact-phone-link {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #4f7942;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(79, 121, 66, 0.25);
+    padding-bottom: 4px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-phone-link:hover {
+    color: #3a5a32;
+    border-color: rgba(58, 90, 50, 0.45);
+}
+
 .expertise-underline {
     text-decoration: underline;
     text-underline-offset: 4px; /* optional: moves underline slightly below text */
@@ -914,6 +937,21 @@ footer p {
     margin-top: 8px;
 }
 
+.footer-contact-meta {
+    margin-top: 10px;
+    color: #4f5c49;
+    font-size: 14px;
+}
+
+.footer-contact-meta a {
+    color: #4f7942;
+    text-decoration: none;
+}
+
+.footer-contact-meta a:hover {
+    text-decoration: underline;
+}
+
 .footer-links {
     color: #3c4539;
     text-decoration: none;
@@ -1112,6 +1150,39 @@ header, footer {
     margin-bottom: 18px;
 }
 
+.profile-intro {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.profile-photo-card {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(80, 120, 60, 0.14);
+}
+
+.profile-photo-card p {
+    margin-bottom: 0;
+}
+
+.profile-list {
+    padding-left: 20px;
+}
+
+.profile-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
 .link-card-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1167,6 +1238,10 @@ header, footer {
     }
 
     .link-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-intro {
         grid-template-columns: 1fr;
     }
 }
@@ -1250,6 +1325,7 @@ header, footer {
     }
 
     footer > .footer-seal,
+    footer > .footer-contact-meta,
     footer > .footer-social,
     footer > p {
         width: 100%;
