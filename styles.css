@@ -907,7 +907,7 @@ h1, h2, p {
 }
 
 .back-to-top-link {
-    font-size: 0.95em;
+    font-size: 0.6em;
     color: #4f7942;
     text-decoration: underline;
     cursor: pointer;
@@ -1210,6 +1210,30 @@ header, footer {
 .profile-page .content-aside .content-card {
     max-width: 520px;
     margin: 24px auto 0;
+}
+
+.faq-page .content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.faq-page .faq-related-pages {
+    position: static;
+    max-width: 920px;
+    margin: 32px auto 0;
+}
+
+.blog-page .content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.blog-page .blog-related-pages {
+    position: static;
+    max-width: 920px;
+    margin: 32px auto 0;
 }
 
 .profile-page .profile-actions {
