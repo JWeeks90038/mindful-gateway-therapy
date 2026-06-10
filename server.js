@@ -48,6 +48,14 @@ app.get('/signup', (req, res) => {
     res.sendFile(path.join(__dirname, 'signup.html'));
 });
 
+app.get('/terms-of-use', (req, res) => {
+    res.sendFile(path.join(__dirname, 'terms-of-use.html'));
+});
+
+app.get('/disclaimer', (req, res) => {
+    res.sendFile(path.join(__dirname, 'disclaimer.html'));
+});
+
 // FAQ and blog hub routes
 app.get('/faq', (req, res) => {
     res.sendFile(path.join(__dirname, 'faq', 'index.html'));
