@@ -1190,6 +1190,37 @@ header, footer {
     margin-top: 18px;
 }
 
+.profile-page .content-main section {
+    text-align: center;
+}
+
+.profile-page .content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.profile-page .content-aside {
+    position: static;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.profile-page .content-aside .content-card {
+    max-width: 520px;
+    margin: 24px auto 0;
+}
+
+.profile-page .profile-actions {
+    justify-content: center;
+}
+
+.profile-page .profile-list {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
 .link-card-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
