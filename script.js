@@ -8,8 +8,34 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    insertMissingFooterContactMeta();
     appendFooterSocialLinks();
 });
+
+function insertMissingFooterContactMeta() {
+    const footer = document.querySelector("footer");
+
+    if (!footer || footer.querySelector(".footer-contact-meta")) {
+        return;
+    }
+
+    const footerContactMeta = document.createElement("div");
+    const profileHref = "/sandy-karina-weeks-lpcc/";
+
+    footerContactMeta.className = "footer-contact-meta";
+    footerContactMeta.innerHTML = [
+        '<a href="' + profileHref + '">Sandy Karina Weeks, LPCC</a> at Mindful Gateway Therapy | ',
+        '<a href="tel:+18582554135">(858) 255-4135</a>'
+    ].join("");
+
+    const footerCopyright = footer.querySelector("p");
+
+    if (footerCopyright) {
+        footer.insertBefore(footerContactMeta, footerCopyright);
+    } else {
+        footer.appendChild(footerContactMeta);
+    }
+}
 
 function appendFooterSocialLinks() {
     const footer = document.querySelector("footer");
